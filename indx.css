@@ -1,0 +1,968 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .iphone-container {
+    perspective: 1000px;
+  }
+  
+  .iphone {
+    width: 375px;
+    height: 812px; /* iPhone 14 dimensions */
+    background-color: #ebebeb;
+    border-radius: 50px;
+    border: 5px solid #000000;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth rotation */
+  }
+  
+  .battery {
+    position: absolute;
+    top: 17px;
+    right: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .battery-level {
+    background-color: #39ff14; /* Green color for battery level */
+    color: #000;
+    padding: 0.px 1px;
+    border-radius: 10px;
+  }
+  
+  .Wi-Fi{
+    height: 10px;
+    width: 10px;
+    right: 100px;
+    left: 100px;
+  }
+
+  .Wi-Fi-left-right{
+    margin-left: 266px;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+  
+  .screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .setup-step {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: slideInRight 0.5s ease forwards; /* Add animation for sliding in from the right */
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .setup-step.hide {
+    animation: slideOutLeft 0.5s ease forwards; /* Add animation for sliding out to the left */
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth background color change */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .clock {
+    position: absolute;
+    bottom: 780px;
+    left: 10%;
+    top: 6px;
+    width: 35px;
+    height: 35px;
+    color: #000000;
+    padding: 10px;
+    font-size: 19px;
+
+  }
+  
+  /* Add styles for applications */
+  .applications {
+    position: absolute;
+    top: -300px; /* Adjust as needed */
+    left: -180px; /* Adjust as needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .application {
+    width: 80px; /* Adjust as needed */
+    margin: 10px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .app-icon {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+  }
+  
+  .app-name {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .setup-step1 {
+    left: -50px;
+    margin-bottom: 50px;
+  }
+  .button-bar {
+    display: flex;
+    margin-top: 760px;
+  }
+  
+  .button-link {
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(3, 97, 160);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-link:hover {
+    background-color: rgb(0, 119, 255);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.caver-batton-iphone {
+  position: absolute;
+  top: 10px;
+  right: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.batton-iphone {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px 50px;
+  border-radius: 20px;
+}
+.batton-iphone-left {
+  position: absolute;
+  top: 125px;
+  rotate: -450deg;
+  right: 365px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.batton-iphone-left {
+  background-color: #000000;
+  color: #000;
+  width: 30px;
+  padding: 4px 1px;
+  border-radius: 20px;
+}
+.batton-iphone-left1 {
+  position: absolute;
+  top: 190px;
+  rotate: -450deg;
+  right: 346px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.batton-iphone-left1 {
+  background-color: #000000;
+  color: #000;
+  width: 30px;
+  padding: 4px 20px;
+  border-radius: 20px;
+}
+.batton-iphone-left2 {
+  position: absolute;
+  top: 273px;
+  rotate: -450deg;
+  right: 346px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.batton-iphone-left2 {
+  background-color: #000000;
+  color: #000;
+  width: 30px;
+  padding: 4px 20px;
+  border-radius: 20px;
+}
+.batton-iphone-left3 {
+  position: absolute;
+  top: 195px;
+  rotate: -450deg;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.batton-iphone-left3 {
+  background-color: #000000;
+  color: #000;
+  width: 30px;
+  padding: 4px 30px;
+  border-radius: 20px;
+}
+.batton-iphone-left4 {
+  position: absolute;
+  top: 800px;
+  right: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.batton-iphone-left4 {
+  background-color: #929292;
+  color: #ffffff;
+  width: 30px;
+  padding: 4px 45px;
+  border-radius: 20px;
+}
+.iphone-camra {
+  position: absolute;
+  bottom: 780px;
+  background-color: #242424;
+  left: 60%;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.iphone-camra1 {
+  position: absolute;
+  bottom: 780px;
+  background-color: #0b0516;
+  left: 60.1%;
+  top: 16.46px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.caver-batton-iphone1 {
+  position: absolute;
+  top: 14px;
+  right: 171px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.batton-iphone1 {
+  background-color: #0c0c0c;
+  color: #ffffff;
+  padding: 11px 30px;
+  border-radius: 20px;
+}
+.img-iphone-back {
+  position: absolute;
+  width: 372x;
+  height: 372px;
+  border-radius: 10px;
+}
+.snapchat {
+  position: absolute;
+  bottom: 780px;
+  background-color: #9e9e9e;
+  left: -155px;
+  top: -240px;
+  width: 45px;
+  height: 45px;
+  border-radius: 80%;
+  transform: translateX(-50%);
+}
+.img-uesr-snapchat {
+  position: absolute;
+  left: -177.5px;
+  top: -343.2px;
+  width: 46px;
+  height: 46px;
+  border-radius: 300%;
+}
+.uesr-snapchat {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 55px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.img-edit-messages {
+  position: absolute;
+  left: 44.7px;
+  top: -350px;
+  width: 56px;
+  height: 56px;
+}
+.img-search-messages {
+  position: absolute;
+  left: 130.3px;
+  top: -344px;
+  width: 40px;
+  height: 40px;
+}
+.img-satngs-messages {
+  position: absolute;
+  left: 99.2px;
+  top: -335.2px;
+  width: 27px;
+  height: 27px;
+}
+.uesr-snapchat1 {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 110px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.uesr-snapchat2 {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 110px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.uesr-snapchat3 {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 110px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.uesr-snapchat4 {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 110px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.uesr-snapchat5 {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: 110px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+}
+.uesr-snapchat-up {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -340px;
+  left: -172px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+}
+.area {
+  position: absolute;
+  top: 23px;
+  rotate: -450deg;
+  right: 101px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.area {
+  background-color: #000000;
+  color: #000;
+  width: 16px;
+  padding: 2px 1px;
+  border-radius: 20px;
+}
+.area1 {
+  position: absolute;
+  top: 25px;
+  rotate: -450deg;
+  right: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.area1 {
+  background-color: #000000;
+  color: #000;
+  width: 12px;
+  padding: 2px 1px;
+  border-radius: 20px;
+}
+.area2 {
+  position: absolute;
+  top: 26px;
+  rotate: -450deg;
+  right: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.area2 {
+  background-color: #000000;
+  color: #000;
+  width: 8px;
+  padding: 2px 1px;
+  border-radius: 20px;
+}
+.area3 {
+  position: absolute;
+  top: 29px;
+  rotate: -450deg;
+  right: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.area3 {
+  background-color: #000000;
+  color: #000;
+  width: 5px;
+  padding: 2px 0.2px;
+  border-radius: 20px;
+}
+.font-snap-user {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+
+.font-snap-user {
+  margin-left: 45px;
+  padding: 10px;
+  margin-top: -72.0vh;
+  font-size: 18px;
+}
+.font-user1 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user1 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -88.4vh;
+  font-size: 18px;
+}
+.font-user2 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user2 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -82.1vh;
+  font-size: 18px;
+}
+.font-user3 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user3 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -76.1vh;
+  font-size: 18px;
+}
+.font-user4 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user4 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -69.8vh;
+  font-size: 18px;
+}
+.font-user5 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user5 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -63.6vh;
+  font-size: 18px;
+}
+.font-user6 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user6 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -57.2vh;
+  font-size: 18px;
+}
+.font-user7 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user7 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -51.0vh;
+  font-size: 18px;
+}
+.font-user8 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user8 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -43.9vh;
+  font-size: 18px;
+}
+.font-user9 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user9 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -38.5vh;
+  font-size: 18px;
+}
+.font-user10 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user10 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -32.4vh;
+  font-size: 18px;
+}
+.font-user11 {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.font-user11 {
+  position: absolute;
+  margin-left: -6.3vh;
+  padding: 10px;
+  margin-top: -25.1vh;
+  font-size: 18px;
+}
+.font-name-choose {
+  padding: 10px 20px;
+  margin-left: -0.1vh;
+  padding: 10px;
+  margin-top: -8.5vh;
+  font-size: 18px;
+}
+.font-name-choose1 {
+  padding: 10px 20px;
+  margin-left: 6.8vh;
+  padding: 10px;
+  margin-top: -9.9vh;
+  font-size: 18px;
+}
+.font-name-choose2 {
+  padding: 10px 20px;
+  margin-left: 16.4vh;
+  padding: 10px;
+  margin-top: -9.9vh;
+  font-size: 18px;
+}
+.font-name-choose3 {
+  padding: 10px 20px;
+  margin-left: 24.5vh;
+  padding: 10px;
+  margin-top: -9.9vh;
+  font-size: 18px;
+}
+.font-name-choose4 {
+  padding: 10px 20px;
+  margin-left: 33.6vh;
+  padding: 10px;
+  margin-top: -14.3vh;
+  font-size: 35px;
+}
+.login-user {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.login-user {
+  position: absolute;
+  margin-left: -6.9vh;
+  padding: 10px;
+  margin-top: -106.2vh;
+  font-size: 20px;
+}
+.name-app {
+  height: 10px;
+  width: 10px;
+  right: 100px;
+  left: 100px;
+  top: 200px;
+}
+.name-app {
+  position: absolute;
+  margin-left: 1.8vh;
+  padding: 10px;
+  margin-top: -107.2vh;
+  font-size: 25px;
+}
+.search-messages {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -340px;
+  left: 131px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+}
+.search-messages {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -340px;
+  left: 134px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+}
+.iphone-messages {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -340px;
+  left: 95px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+}
+.emoji-messages {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -340px;
+  left: 55px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50px;
+}
+.all-people {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: -180px;
+  height: 25px;
+  width: 60px;
+  border-radius: 50px;
+}
+.choose-all-people {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: -183px;
+  height: 28px;
+  width: 60px;
+  border-radius: 50px;
+}
+.choose1 {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: -120px;
+  height: 28px;
+  width: 80px;
+  border-radius: 50px;
+}
+.choose2 {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: -36px;
+  height: 28px;
+  width: 70px;
+  border-radius: 50px;
+}
+.choose3 {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: 37px;
+  height: 28px;
+  width: 76px;
+  border-radius: 50px;
+}
+.choose4 {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: 116px;
+  height: 28px;
+  width: 50px;
+  border-radius: 50px;
+}
+.choose5 {
+  position: absolute;
+  background-color: #d6d6d6;
+  top: -285px;
+  left: 38px;
+  height: 28px;
+  width: 76px;
+  border-radius: 50px;
+}
+.lain-app-messages {
+  position: absolute;
+  background-color: #9e9e9e;
+  top: -497px;
+  left: -40px;
+  height: 500px;
+  rotate: 450.0deg;
+  width: 3px;
+  border-radius: 10px;
+}
+.button-messages {
+  position: absolute;
+  background-color: #ebebeb;
+  top: -245px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages1 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: -190.5px;
+  left: -195px;
+  height: 60px;
+  width: 389px;
+  border-radius: 10px;
+}
+.button-messages2 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: -135px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages3 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: -80.1px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages4 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: -25.1px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages5 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 30px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages6 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 85px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages7 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 141px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages8 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 195px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages9 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 250px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages10 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 305px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.button-messages11 {
+  position: absolute;
+  background-color: #ebebeb;
+  top: 360px;
+  left: -195px;
+  height: 60px;
+  width: 390px;
+  border-radius: 10px;
+}
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, .1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
